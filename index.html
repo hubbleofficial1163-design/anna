@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover, user-scalable=no">
+    <meta name="theme-color" content="#ffffff">
+    <title>Приглашение на свадьбу | Иван и Анна</title>
+    <meta name="description" content="Приглашение на свадьбу Ивана и Анны 25 апреля 2026 года">
+    
+    <!-- Предзагрузка критичных ресурсов -->
+    <link rel="preload" href="1.jpg" as="image" importance="high">
+    
+    <!-- Предподключение к внешним ресурсам -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+    <!-- Основные стили -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Шрифты -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Иконки -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- iOS мета-теги -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Свадьба">
+    
+    <!-- Android мета-теги -->
+    <meta name="mobile-web-app-capable" content="yes">
+    
+    <!-- Open Graph для соцсетей -->
+    <meta property="og:title" content="Приглашение на свадьбу | Иван и Анна">
+    <meta property="og:description" content="Приглашение на свадьбу Ивана и Анны 25 апреля 2026 года">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="1.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💍</text></svg>">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💍</text></svg>">
+    
+    <style>
+        /* Инлайн стили для критичного CSS */
+        .hero-section, .location-section, .dresscode-section, .wishes-section, .footer {
+            position: relative;
+        }
+        
+        /* Предотвращение FOIT (Flash of Invisible Text) */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        
+        body.fonts-loaded {
+            font-family: 'Raleway', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        
+        .names, .footer-names, .section-title, .invitation-text h2, .dresscode-text h2, .location-text h2, .wishes-text h2 {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        
+        body.fonts-loaded .names,
+        body.fonts-loaded .footer-names,
+        body.fonts-loaded .section-title,
+        body.fonts-loaded .invitation-text h2,
+        body.fonts-loaded .dresscode-text h2,
+        body.fonts-loaded .location-text h2,
+        body.fonts-loaded .wishes-text h2 {
+            font-family: 'Playfair Display', Georgia, 'Times New Roman', Times, serif;
+        }
+        
+        /* Убираем CSS переменную для vh и используем новый подход */
+        :root {
+            --doc-height: 100%;
+        }
+        
+        html, body {
+            height: var(--doc-height);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Первое фото с именами и датой + плеер -->
+        <section class="hero-section">
+            <div class="hero-image">
+                <img src="1.jpg" alt="Иван и Анна">
+                <div class="hero-text">
+                    <h1 class="names">Иван <span class="ampersand">&</span> Анна</h1>
+                    <div class="date">25 Апреля 2026</div>
+                    
+                    <!-- Плеер с музыкой (текст по кругу) -->
+                    <div class="music-player">
+                        <div class="music-circle">
+                            <button id="music-toggle" class="music-btn">
+                                <i class="fas fa-play"></i>
+                            </button>
+                            <svg class="music-text-svg" viewBox="0 0 200 200">
+                                <path id="circlePath" fill="none" d="M 100, 100 m -90, 0 a 90,90 0 1,1 180,0 a 90,90 0 1,1 -180,0" />
+                                <text class="music-text-around">
+                                    <textPath href="#circlePath" startOffset="0" textLength="565" lengthAdjust="spacingAndGlyphs">
+                                        включите музыку • включите музыку • включите музыку • включите музыку •
+                                    </textPath>
+                                </text>
+                            </svg>
+                        </div>
+                    </div>
+                    <audio id="wedding-audio" loop preload="auto">
+                        <source src="1.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+            </div>
+        </section>
+
+        <!-- Текст приглашения ПОД фото -->
+        <section class="invitation-text-section">
+            <div class="invitation-text">
+                <h2>Дорогие друзья и близкие!</h2>
+                <p>С радостью приглашаем вас разделить с нами самый важный день в нашей жизни — день нашей свадьбы.</p>
+                <p>Мы будем счастливы видеть вас на церемонии бракосочетания и праздничном ужине.</p>
+                <p class="quote">«Любовь измеряется не годами, а моментами, которые остаются с нами навсегда»</p>
+                <p class="signature">С любовью, Иван и Анна</p>
+            </div>
+        </section>
+
+        <!-- Третье фото с местом проведения -->
+        <section class="location-section">
+            <div class="location-image">
+                <img src="3.jpg" alt="Место проведения">
+                <div class="location-text">
+                    <h2>Место проведения</h2>
+                    <div class="location-info">
+                        <p><i class="fas fa-map-marker-alt"></i> Банкетный зал "Морозов"</p>
+                        <p><i class="fas fa-location-dot"></i> Хабаровск, ул. Морозова Павла Леонтьевича, 79/5</p>
+                        <p><i class="fas fa-calendar"></i> 25 апреля 2026</p>
+                        <p><i class="fas fa-clock"></i> Начало в 16:00</p>
+                    </div>
+                    <button id="map-btn" class="map-button">
+                        <i class="fas fa-map"></i> Посмотреть на карте
+                    </button>
+                </div>
+            </div>
+            <div id="map-container" class="map-container hidden">
+                <div class="map-placeholder">
+                    <i class="fas fa-map-location-dot"></i>
+                    <p>Здесь будет интерактивная карта с местом проведения свадьбы</p>
+                    <p>Хабаровск, ул. Морозова Павла Леонтьевича, 79/5</p>
+                    <button id="close-map" class="close-map-btn">Закрыть карту</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Детали мероприятия -->
+        <section class="details-section">
+            <h2 class="section-title">Программа дня</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-time">16:00</div>
+                    <div class="timeline-content">
+                        <h3>Сбор гостей, фуршет</h3>
+                        <p>Собираясь на мероприятие, просим взять с собой ваши прекрасные улыбки и хорошее настроение</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-time">17:00</div>
+                    <div class="timeline-content">
+                        <h3>Церемония бракосочетания</h3>
+                        <p>На всякий случай приготовьте платочки для трогательного момента</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-time">18:00</div>
+                    <div class="timeline-content">
+                        <h3>Начало банкета</h3>
+                        <p>Время вкусной еды, танцев и развлечений</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-time">21:30</div>
+                    <div class="timeline-content">
+                        <h3>Свадебный торт</h3>
+                        <p>Сладкая традиция, которую мы не можем обойти стороной</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-time">23:00 - 23:30</div>
+                    <div class="timeline-content">
+                        <h3>Завершение вечера</h3>
+                        <p>К сожалению, даже такой прекрасный вечер может закончиться</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Второе фото - Дресс-код -->
+        <section class="dresscode-section">
+            <div class="dresscode-image">
+                <img src="2.jpg" alt="Дресс-код">
+                <div class="dresscode-text">
+                    <h2>Дресс-код</h2>
+                    <p class="dresscode-main">Нам будет очень приятно, если вы поддержите цветовую гамму торжества и выберете наряды в соответствии с цветовой палитрой нашей свадьбы.</p>
+                    <div class="dresscode-details">
+                        <p><span class="dresscode-gender">Для мужчин:</span> Темные брюки/ светлая рубашка или поло</p>
+                        <p><span class="dresscode-gender">Для женщин:</span></p>
+                        <div class="dresscode-palette-wrapper">
+                            <img src="5.png" alt="Цветовая палитра свадьбы" class="dresscode-palette">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция "Пожелания" -->
+        <section class="wishes-section">
+            <div class="wishes-content">
+                <h2 class="section-title">Наши пожелания</h2>
+                
+                <div class="wishes-block">
+                    <h3><i class="fas fa-gift"></i> О подарках</h3>
+                    <p>Спасибо за понимание и поддержку! Ваше присутствие — лучший подарок для нас.</p>
+                    <p>Если вы задумались о подарке – самым приятным для нас будет «букет» в конверте. Такой подарок точно не завянет и поможет воплотить наши мечты в жизнь.</p>
+                    <p>Цветы – это прекрасно, но, чтобы не переживать за их судьбу после праздника, мы будем рады, если вместо букета вы подарите бутылочку вашего любимого напитка. Это добавит ещё больше тепла нашему вечеру!</p>
+                    <p>Если вам не хочется оставлять невесту без цветов, вы можете связаться с ее любимым флористом, который может создать букет после торжества.</p>
+                    <div class="florist-contact">
+                        <span class="florist-label">Наш флорист:</span>
+                        <a href="tel:+79244030306" class="contact-link florist-phone">+7 924 403-03-06</a>
+                    </div>
+                </div>
+                
+                <div class="wishes-block">
+                    <h3><i class="fas fa-heart"></i> О традициях</h3>
+                    <p>Мы знаем, как сильно эмоции переполняют в этот день, но просим воздержаться от криков «горько», ведь поцелуй – это искренний знак чувств, он не бывает по заказу.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Таймер обратного отсчета -->
+        <section class="timer-section">
+            <h2 class="section-title">До свадьбы осталось</h2>
+            <div class="countdown-timer">
+                <div class="timer-block">
+                    <span id="days" class="timer-number">00</span>
+                    <span class="timer-label">дней</span>
+                </div>
+                <div class="timer-block">
+                    <span id="hours" class="timer-number">00</span>
+                    <span class="timer-label">часов</span>
+                </div>
+                <div class="timer-block">
+                    <span id="minutes" class="timer-number">00</span>
+                    <span class="timer-label">минут</span>
+                </div>
+                <div class="timer-block">
+                    <span id="seconds" class="timer-number">00</span>
+                    <span class="timer-label">секунд</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Форма подтверждения присутствия (RSVP) -->
+        <section class="rsvp-section" id="rsvp-section">
+            <h2 class="section-title">Анкета гостя</h2>
+            <p class="section-subtitle">Пожалуйста, подтвердите присутствие до 1 июля 2026 года</p>
+            
+            <form id="rsvp-form" class="rsvp-form">
+                <div class="form-group full-width">
+                    <label for="name">ФИО *</label>
+                    <input type="text" id="name" name="name" placeholder="Иванов Иван Иванович" required>
+                </div>
+                
+                <div class="form-group full-width">
+                    <label for="attendance">Придёте? *</label>
+                    <select id="attendance" name="attendance" required>
+                        <option value="" disabled selected>Выберите вариант</option>
+                        <option value="yes">С радостью приду</option>
+                        <option value="no">К сожалению, не смогу</option>
+                    </select>
+                </div>
+                
+                <div class="form-group full-width">
+                    <label for="drink">Предпочтения по напиткам *</label>
+                    <select id="drink" name="drink" required>
+                        <option value="" disabled selected>Выберите ваш вариант</option>
+                        <option value="sparkling">Игристое</option>
+                        <option value="red">Красное вино</option>
+                        <option value="white">Белое вино</option>
+                        <option value="whiskey">Виски</option>
+                        <option value="vodka">Водка</option>
+                        <option value="gin">Джин</option>
+                        <option value="none">Не пью</option>
+                    </select>
+                </div>
+                
+                <div class="form-group full-width">
+                    <label for="meal">Предпочтения по блюдам *</label>
+                    <select id="meal" name="meal" required>
+                        <option value="" disabled selected>Выберите основное блюдо</option>
+                        <option value="meat">Мясо</option>
+                        <option value="fish">Рыба</option>
+                    </select>
+                </div>
+                
+                <div class="form-group full-width">
+                    <label for="message">Ваши пожелания, аллергии или особые предпочтения</label>
+                    <textarea id="message" name="message" rows="3" placeholder="Напишите, если у вас есть аллергия или особые пожелания..."></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">Отправить ответ</button>
+                <div id="form-message" class="form-message"></div>
+            </form>
+        </section>
+
+        <!-- Футер с фото и контактами -->
+        <footer class="footer">
+            <div class="footer-image">
+                <img src="4.jpg" alt="Мы ждем вас">
+                <div class="footer-text">
+                    <p>Ждем вас с нетерпением!</p>
+                    <p class="footer-names">Иван и Анна</p>
+                    <p>25 апреля 2026 года</p>
+                </div>
+                <div class="footer-contacts">
+                    <p class="contacts-title"><i class="fas fa-phone-alt"></i> Контакты для связи</p>
+                    <div class="contacts-wrapper">
+                        <p><span class="contact-label">Невеста:</span> <a href="tel:+79990868903" class="contact-phone">8-999-086-8903</a></p>
+                        <p><span class="contact-label">Ведущий:</span> <a href="tel:+79147708086" class="contact-phone">+7 914 770-80-86</a></p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Предзагрузка оставшихся изображений -->
+    <link rel="preload" as="image" href="2.jpg">
+    <link rel="preload" as="image" href="3.jpg">
+    <link rel="preload" as="image" href="4.jpg">
+    <link rel="preload" as="image" href="5.png">
+    
+    <script src="script.js"></script>
+    
+    <script>
+        // Инлайн скрипт для оптимизации загрузки шрифтов
+        document.fonts.ready.then(function() {
+            document.body.classList.add('fonts-loaded');
+        });
+        
+        // Fallback для старых браузеров
+        setTimeout(function() {
+            document.body.classList.add('fonts-loaded');
+        }, 1000);
+    </script>
+</body>
+</html>
