@@ -303,14 +303,16 @@ body {
     width: 100%;
 }
 
-.dresscode-palette {
-    width: 90%;
-    max-width: 700px;
-    height: auto;
+.dresscode-palette-wrapper .dresscode-palette,
+img.dresscode-palette[src*="5.png"] {
+    width: 80% !important;
+    max-width: 450px !important;
+    height: auto !important;
     object-fit: contain;
     border-radius: 12px;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
     margin: 0 auto;
+    display: block;
 }
 
 /* СЕКЦИЯ С ДЕТАЛЯМИ (ТАЙМИНГ) */
@@ -603,9 +605,12 @@ body {
 
 /* Таймер обратного отсчета */
 .timer-section {
-    padding: 60px 20px;
+    padding: 60px 20px 40px; /* Уменьшен нижний отступ */
     background: linear-gradient(to bottom, #faf8f5, #ffffff);
     text-align: center;
+    margin-top: -170px; /* Поднимает секцию вверх */
+    position: relative; /* Для корректного отображения */
+/* Чтобы не перекрывался другими элементами */
 }
 
 .countdown-timer {
@@ -963,7 +968,7 @@ textarea {
     }
     
     .dresscode-palette {
-        width: 100%;
+        width: 85%;
         border-radius: 8px;
     }
     
