@@ -12,7 +12,7 @@ let isPlaying = false;
 
 // ================ КОНФИГУРАЦИЯ ================
 // ⚠️ ЗАМЕНИТЕ НА СВОЙ URL ПОСЛЕ ДЕПЛОЯ APPS SCRIPT
-const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwaK_QFJsIhiPTkQzpJZF3nH9z7GS2960MD27O4DaXJ_d-2Dy96rDFmvjlG6m5GdjJt/exec';
+const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyyPx3LLj7z8xPFew4L2t3eTEj-YJd9VoC9RGbbUJ_79MHphxFwHbscVyDGhWhSYVof/exec';
 
 // ================ ОТПРАВКА В GOOGLE SHEETS ================
 /**
@@ -628,3 +628,4 @@ window.addEventListener('beforeunload', function(e) {
         }
     }
 });
+
