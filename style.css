@@ -1146,3 +1146,99 @@ textarea {
         gap: 8px;
     }
 }
+
+
+/* ================ ДОПОЛНИТЕЛЬНЫЕ СТИЛИ ДЛЯ КАРТЫ ================ */
+/* Добавьте этот код в самый конец файла style.css */
+
+/* Стили для контейнера с картой */
+.map-container {
+    margin-top: 0;
+    padding: 20px;
+    background-color: white;
+}
+
+/* Обертка для карты и кнопки закрытия */
+.map-wrapper {
+    max-width: 100%;
+    background-color: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.map-wrapper iframe {
+    border-radius: 4px;
+    margin-bottom: 20px;
+    display: block;
+    width: 100%;
+    height: 400px;
+    border: 1px solid #e0e0e0;
+}
+
+.close-map-btn {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    cursor: pointer;
+    font-family: 'Raleway', sans-serif;
+    font-size: clamp(0.9rem, 3vw, 1rem);
+    -webkit-appearance: none;
+    border-radius: 0;
+    touch-action: manipulation;
+    min-height: 44px;
+    display: block;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    transition: background-color 0.3s ease;
+}
+
+.close-map-btn:hover {
+    background-color: #555;
+}
+
+.close-map-btn:active {
+    background-color: #222;
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 768px) {
+    .map-wrapper {
+        padding: 15px;
+    }
+    
+    .map-wrapper iframe {
+        height: 350px;
+    }
+}
+
+@media (max-width: 480px) {
+    .map-wrapper {
+        padding: 10px;
+    }
+    
+    .map-wrapper iframe {
+        height: 300px;
+    }
+    
+    .close-map-btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 350px) {
+    .map-wrapper iframe {
+        height: 250px;
+    }
+}
+
+/* Для устройств с горизонтальной ориентацией */
+@media (max-height: 600px) and (orientation: landscape) {
+    .map-wrapper iframe {
+        height: 250px;
+    }
+}
